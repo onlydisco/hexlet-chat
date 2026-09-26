@@ -8,7 +8,6 @@ import ApiContext from './contexts/ApiContext.js';
 import store from './slices/index.js';
 import App from './App.jsx';
 import resources from './locales/index.js';
-import RollbarProvider from './components/RollbarProvider.jsx';
 import { actions as messagesActions } from './slices/messagesInfoSlice.js';
 import { actions as channelsActions } from './slices/channelsInfoSlice.js';
 
@@ -69,17 +68,15 @@ const init = async (socket) => {
   });
 
   return (
-    <RollbarProvider>
-      <Provider store={store}>
-        <BrowserRouter>
-          <I18nextProvider i18n={i18n}>
-            <ApiContext.Provider value={api}>
-              <App />
-            </ApiContext.Provider>
-          </I18nextProvider>
-        </BrowserRouter>
-      </Provider>
-    </RollbarProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <I18nextProvider i18n={i18n}>
+          <ApiContext.Provider value={api}>
+            <App />
+          </ApiContext.Provider>
+        </I18nextProvider>
+      </BrowserRouter>
+    </Provider>
   );
 };
 

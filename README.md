@@ -15,7 +15,7 @@
 
 Hexlet Chat is a single-page real-time chat application inspired by Slack. Users can create an account, join channels, exchange messages instantly, and manage custom channels from a responsive interface.
 
-The project was built as the final frontend project in the [Hexlet](https://hexlet.io) curriculum. It demonstrates authentication, client-side routing, normalized state management, form validation, localization, error monitoring, and real-time communication.
+The project was built as the final frontend project in the [Hexlet](https://hexlet.io) curriculum. It demonstrates authentication, client-side routing, normalized state management, form validation, localization, error handling, and real-time communication.
 
 ## Features
 
@@ -25,7 +25,7 @@ The project was built as the final frontend project in the [Hexlet](https://hexl
 - Client-side form validation with clear error feedback
 - Profanity filtering for messages and channel names
 - Russian localization with pluralization
-- Toast notifications and Rollbar error monitoring
+- Toast notifications with user-friendly error feedback
 - Responsive UI based on React Bootstrap
 
 ## Tech stack
@@ -39,7 +39,6 @@ The project was built as the final frontend project in the [Hexlet](https://hexl
 | Real-time | Socket.IO Client |
 | HTTP | Axios |
 | Localization | i18next, react-i18next |
-| Monitoring | Rollbar |
 | Backend | `@hexlet/chat-server` |
 
 ## How it works
@@ -114,14 +113,6 @@ The production server serves the generated files from `frontend/build` and expos
 ├── Makefile
 └── package.json          # Server and repository scripts
 ```
-
-## Environment variables
-
-| Variable | Required | Description |
-| --- | --- | --- |
-| `REACT_APP_ROLLBAR_TOKEN` | No | Client access token used to report frontend errors to Rollbar |
-
-Create `frontend/.env.local` for local values. Environment files are ignored by Git and should never contain credentials committed to the repository.
 
 ## Deployment
 
