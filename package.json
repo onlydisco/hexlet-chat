@@ -1,7 +1,7 @@
 {
-  "name": "@hexlet/code",
+  "name": "hexlet-chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "A real-time, Slack-inspired chat application built with React and Socket.IO.",
   "main": "index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onlydisco/frontend-project-12.git"
+    "url": "git+https://github.com/onlydisco/hexlet-chat.git"
   },
   "author": "Sergey Mukhin",
   "license": "ISC",
